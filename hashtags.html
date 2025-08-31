@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Hashtag Counter | Free Tool</title>
+  <meta name="description" content="Count your Instagram hashtags instantly! Free Instagram Hashtag Counter lets you paste hashtags and see how many you’ve used (max allowed = 30).">
+  <meta name="keywords" content="Instagram hashtag counter, Instagram hashtags, count hashtags, Instagram tools, free hashtag counter">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freeinstatools.com/hashtags.html">
+  <link rel="icon" href="assets/FIT.png" type="image/x-icon">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f7f8fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #ff2e63;
+    }
+
+    .logo span { color: #252a34; }
+
+    header nav a {
+      background: linear-gradient(135deg, #ff416c, #6a11cb);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    header nav a:hover {
+      background: linear-gradient(135deg, #6a11cb, #ff416c);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #6a11cb;
+      text-align: center;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .tool {
+      background: #fff;
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid #e5e5e5;
+      font-size: 1rem;
+      resize: vertical;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    .counter {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37,117,252,0.4);
+    }
+
+    article {
+      background: #fff;
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+
+    article h2 { color: #6a11cb; }
+    article h3 { color: #2575fc; margin-top: 1.5rem; }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #f9a826;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    footer a:hover { color: #fff; }
+
+    @media screen and (max-width: 768px) {
+      header { flex-direction: column; text-align: center; }
+      header nav { margin-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Free <span>Insta </span>Tools</div>  <nav>
+    <a href="index.html">Home</a>
+    <a href="hashtags.html">Hashtag Counter</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+  </nav>
+</header>
+
+  <div class="container">
+    <h1>Instagram Hashtag Counter</h1>
+    <p class="subtitle">Paste your Instagram hashtags below and see the count instantly. Instagram allows up to 30 hashtags per post.</p>
+
+    <section class="tool">
+      <textarea id="hashtags" placeholder="Paste your hashtags here..."></textarea>
+      <div class="counter">
+        Hashtags used: <span id="count">0</span>/30
+      </div>
+      <button id="copyBtn">📋 Copy Hashtags</button>
+    </section>
+
+    <article>
+      <h2>Why Use This Hashtag Counter?</h2>
+      <p>Instagram limits posts to <strong>30 hashtags</strong>. Using too many or too few hashtags can affect your post engagement. This free tool helps you count hashtags quickly and optimize your posts.</p>
+
+      <h3>How It Works</h3>
+      <ul>
+        <li>Paste your hashtags into the box.</li>
+        <li>See the live count of hashtags used.</li>
+        <li>Copy and use them safely on Instagram without exceeding limits.</li>
+      </ul>
+
+      <h3>FAQs</h3>
+      <p><strong>Q: What is the maximum number of hashtags allowed?</strong><br>A: Instagram allows up to 30 hashtags per post.</p>
+      <p><strong>Q: Can I copy all hashtags at once?</strong><br>A: Yes! Click the "Copy Hashtags" button to copy all text.</p>
+    </article>
+  </div>
+
+  <footer>
+    <p>© 2025 FreeInstaTool. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+  </footer>
+
+  <script>
+    const hashtagsInput = document.getElementById("hashtags");
+    const countDisplay = document.getElementById("count");
+    const copyBtn = document.getElementById("copyBtn");
+
+    function countHashtags() {
+      const text = hashtagsInput.value;
+      const matches = text.match(/#[\w]+/g);
+      countDisplay.textContent = matches ? matches.length : 0;
+    }
+
+    hashtagsInput.addEventListener("input", countHashtags);
+
+    copyBtn.addEventListener("click", () => {
+      hashtagsInput.select();
+      document.execCommand("copy");
+      alert("✅ Hashtags copied to clipboard!");
+    });
+  </script>
+</body>
+</html>
