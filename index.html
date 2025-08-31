@@ -357,6 +357,122 @@
   font-style: italic;
   text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.3);
 }
+
+/* ---------- Responsive CSS ---------- */
+@media screen and (max-width: 1024px) {
+  .page-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .ad-container {
+    display: none; /* already hidden for right/left ads */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .tool, .content, #font-generator {
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+  }
+
+  select, #inputText, #fontInput {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .font-style {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .font-style button {
+    width: 100%;
+  }
+
+  .share-bar {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .tool, .content, #font-generator {
+    padding: 1rem 0.8rem;
+  }
+
+  select, #inputText, #fontInput {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .counter {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+
+  .font-item span {
+    word-break: break-word;
+  }
+
+  .share-bar a {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+
+  .content h2, .content h3 {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 15px;
+  }
+}
+
   </style>
 </head>
 <body>
