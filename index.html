@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Bio & Caption Length Checker | Free Tool</title>
+  <meta name="description" content="Free Instagram Bio & Caption Length Checker. Count characters in real-time to stay within Instagram’s 150 bio and 2200 caption limits. Optimize your posts easily.">
+  <meta name="keywords" content="Instagram bio limit, Instagram caption limit, Instagram character counter, Instagram text tool">
+  <meta property="og:title" content="Instagram Bio & Caption Length Checker">
+  <meta property="og:description" content="Check Instagram bio (150 chars) and caption (2200 chars) instantly with this free online tool.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yourdomain.com/og-image.png">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Instagram Bio & Caption Length Checker">
+  <meta name="twitter:description" content="Free tool to count Instagram bio and caption characters online.">
+  <meta name="twitter:image" content="https://yourdomain.com/og-image.png">
+<!-- Canonical URL -->
+<link rel="canonical" href="https://yourdomain.com/" />
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+<!-- Author -->
+<meta name="author" content="FreeInstaTool" />
+
+<!-- Robots -->
+<meta name="robots" content="index, follow" />
+
+<!-- Language -->
+<meta http-equiv="Content-Language" content="en">
+
+<!-- Theme Color (for mobile browsers) -->
+<meta name="theme-color" content="#ffffff">
+
+  <style>
+    /* ---------- Base Styles ---------- */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f7f8fc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      text-align: left;
+      padding: 2.5rem 1rem;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      background-size: 300% 300%;
+      color: #fff;
+      animation: gradientBG 10s ease infinite;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .logo {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ff2e63; /* main accent */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    }
+
+    .logo span {
+    color: #252a34; /* contrast color for "Insta" */
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+    .subtitle {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* ---------- Main Wrapper ---------- */
+    .page-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 20px auto;
+      max-width: 1400px;
+      padding: 0 10px;
+    }
+
+    /* ---------- Tool + Content ---------- */
+    main {
+      flex: 1;
+      max-width: 800px;
+      padding: 1rem;
+    }
+
+    .tool {
+      background: #fff;
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      transition: transform 0.2s ease;
+    }
+    .tool:hover {
+      transform: translateY(-3px);
+    }
+    label {
+      font-weight: 600;
+      color: #444;
+    }
+    select, 
+    #inputText {
+      display: block;
+      width: 100%;
+      margin: 0.8rem 0;
+      padding: 12px;
+      border: 2px solid #e5e5e5;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      box-sizing: border-box;
+    }
+    #inputText {
+      min-height: 140px;
+      resize: vertical;
+    }
+    select:focus, textarea:focus {
+      border-color: #6a11cb;
+      box-shadow: 0 0 6px rgba(106, 17, 203, 0.3);
+      outline: none;
+    }
+
+    .counter {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    /* ---------- Button ---------- */
+    button {
+      margin-top: 1rem;
+      padding: 0.9rem;
+      border: none;
+      font-size: 1rem;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 12px rgba(37,117,252,0.3);
+    }
+    button:hover {
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(37,117,252,0.4);
+    }
+
+    /* ---------- Content Box ---------- */
+    .content {
+      background: #fff;
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    }
+    .content h2 {
+      color: #6a11cb;
+      margin-bottom: 0.5rem;
+    }
+    .content h3 {
+      margin-top: 1.5rem;
+      color: #2575fc;
+    }
+    strong {
+      color: #ff416c;
+    }
+
+    /* ---------- Footer ---------- */
+     footer {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  footer .footer-container {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  footer a {
+    color: #f9a826;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+  }
+
+  footer a:hover {
+    color: #fff;
+  }
+
+    /* ---------- Social Share Bar ---------- */
+    .share-bar {
+      margin: 30px auto;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .share-bar a {
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 8px;
+      color: white;
+      transition: transform 0.2s;
+    }
+    .share-bar a:hover {
+      transform: scale(1.1);
+    }
+    .fb { background: #3b5998; }
+    .tw { background: #1da1f2; }
+    .wa { background: #25d366; }
+    .li { background: #0077b5; }
+
+    /* ---------- Sidebar Ads ---------- */
+    .ad-container {
+      width: 160px;
+      min-height: 600px;
+      margin: 0 15px;
+      position: sticky;
+      top: 20px;
+    }
+    .ad-placeholder {
+      background: #f1f1f1;
+      border: 2px dashed #ccc;
+      height: 600px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      color: #555;
+    }
+    @media screen and (max-width: 1024px) {
+      .ad-container {
+        display: none;
+      }
+    }
+
+     /* ---------- Font Generator Styles ---------- */
+    #font-generator textarea {
+      width: 100%;
+      height: 80px;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid #e5e5e5;
+      font-size: 1rem;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+    #font-generator textarea:focus {
+      border-color: #6a11cb;
+      box-shadow: 0 0 6px rgba(106, 17, 203, 0.3);
+      outline: none;
+    }
+    .font-results {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 15px;
+    }
+    .font-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+      font-size: 1.1rem;
+    }
+    .font-item button {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      border: none;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .font-item button:hover {
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+    }
+      #font-generator {
+    margin-top: 40px;
+    padding: 20px;
+    background: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  #fontInput {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .font-style {
+    margin: 10px 0;
+    padding: 8px 12px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .font-style button {
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .font-style button:hover {
+    background: #4338ca;
+  }
+  /* Rainbow gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #ff4b1f, #ff9068, #ffdb00, #00e676, #2196f3, #9c27b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Neon glow */
+.neon-text {
+  color: #00e5ff;
+  text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+  font-weight: bold;
+}
+
+/* Pastel Instagram vibe */
+.pastel-text {
+  color: #ff7eb9;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.3);
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Free <span>Insta </span>Tools </div>
+  </header>
+
+  <div class="page-container">
+    <!-- Left Ad -->
+    <aside class="ad-container left-ad">
+      <div class="ad-placeholder">Ad 160x600</div>
+    </aside>
+
+    <!-- Main Tool + Content -->
+    <main>
+      <section class="tool">
+        <label for="mode">Choose Mode:</label>
+        <select id="mode">
+          <option value="150">Instagram Bio (150 limit)</option>
+          <option value="2200">Instagram Caption (2200 limit)</option>
+        </select>
+
+        <textarea id="inputText" placeholder="✍️ Type or paste your bio/caption here..."></textarea>
+        
+        <div class="counter">
+          <span id="charCount">0</span>/<span id="charLimit">150</span> characters
+        </div>
+
+        <!-- Social Share Bar -->
+        <div class="share-bar">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com" class="fb" target="_blank">Facebook</a>
+          <a href="https://twitter.com/intent/tweet?text=Check+your+Instagram+bio+%26+caption+length+with+this+free+tool!&url=https://yourdomain.com" class="tw" target="_blank">Twitter</a>
+          <a href="https://api.whatsapp.com/send?text=Check+your+Instagram+bio+%26+caption+length+with+this+free+tool!+https://yourdomain.com" class="wa" target="_blank">WhatsApp</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://yourdomain.com&title=Instagram+Bio+%26+Caption+Length+Checker&summary=Free+tool+to+count+Instagram+bio+%26+caption+characters+online." class="li" target="_blank">LinkedIn</a>
+        </div>
+
+        <button id="copyBtn">📋 Copy Text</button>
+      </section>
+
+        <!-- New Tool: Font Generator -->
+      <section id="font-generator" class="tool">
+        <h2>Instagram Font Generator</h2>
+        <p>Convert your normal text into stylish Instagram fonts. Copy and paste directly into your bio, captions, or comments.</p>
+        
+        <textarea id="fontInput" placeholder="✍️ Type your text here..."></textarea>
+        
+        <div id="fontResults" class="font-results"></div>
+      </section>
+
+      <article class="content">
+        <h2>Why use this tool?</h2>
+        <p>Instagram limits your bio to <strong>150 characters</strong> and captions to <strong>2,200 characters</strong>. Going over the limit can cut off your text and reduce engagement. This free tool helps you stay within limits and make your content impactful.</p>
+
+        <h3>FAQs</h3>
+        <p><strong>Q: What is the Instagram bio limit?</strong><br>A: Instagram bios allow up to 150 characters.</p>
+        <p><strong>Q: What is the Instagram caption limit?</strong><br>A: Instagram captions allow up to 2,200 characters.</p>
+      </article>
+    </main>
+
+    <!-- Right Ad -->
+    <aside class="ad-container right-ad">
+      <div class="ad-placeholder">Ad 160x600</div>
+    </aside>
+  </div>
+    
+    <!-- Footer -->
+    <footer>
+    <div class="footer-container">
+        <p>© 2025 FreeInstaTool. All rights reserved.</p>
+        <nav>
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms & Conditions</a>
+        </nav>
+    </div>
+    </footer>
+
+  <script>
+    const inputText = document.getElementById("inputText");
+    const charCount = document.getElementById("charCount");
+    const charLimit = document.getElementById("charLimit");
+    const mode = document.getElementById("mode");
+    const copyBtn = document.getElementById("copyBtn");
+
+    let limit = parseInt(mode.value);
+
+    mode.addEventListener("change", () => {
+      limit = parseInt(mode.value);
+      charLimit.textContent = limit;
+      updateCount();
+    });
+
+    inputText.addEventListener("input", updateCount);
+
+    function updateCount() {
+      let count = inputText.value.length;
+      charCount.textContent = count;
+
+      if (count <= limit * 0.8) {
+        charCount.style.color = "green";
+      } else if (count <= limit) {
+        charCount.style.color = "orange";
+      } else {
+        charCount.style.color = "red";
+      }
+    }
+
+    copyBtn.addEventListener("click", () => {
+      inputText.select();
+      document.execCommand("copy");
+      alert("✅ Text copied to clipboard!");
+    });
+
+      /* ---------- New Font Generator Script ---------- */
+      const fontInput = document.getElementById("fontInput");
+  const fontResults = document.getElementById("fontResults");
+
+  const fontStyles = {
+    "Bold": str => str.split("").map(c => String.fromCodePoint(c.charCodeAt(0) + 0x1D400 - 0x41)).join(""),
+    "Italic": str => str.split("").map(c => String.fromCodePoint(c.charCodeAt(0) + 0x1D434 - 0x41)).join(""),
+    "Monospace": str => str.split("").map(c => String.fromCodePoint(c.charCodeAt(0) + 0x1D670 - 0x41)).join(""),
+    "Bubble": str => str.split("").map(c => {
+      if (/[a-z]/.test(c)) return String.fromCodePoint(c.charCodeAt(0) - 97 + 0x1D552);
+      if (/[A-Z]/.test(c)) return String.fromCodePoint(c.charCodeAt(0) - 65 + 0x1D538);
+      return c;
+    }).join(""),
+    "Small Caps": str => str.toLowerCase().replace(/[a-z]/g, c => {
+      const smallCaps = {
+        a:"ᴀ",b:"ʙ",c:"ᴄ",d:"ᴅ",e:"ᴇ",f:"ꜰ",g:"ɢ",h:"ʜ",i:"ɪ",j:"ᴊ",k:"ᴋ",l:"ʟ",m:"ᴍ",
+        n:"ɴ",o:"ᴏ",p:"ᴘ",q:"ǫ",r:"ʀ",s:"s",t:"ᴛ",u:"ᴜ",v:"ᴠ",w:"ᴡ",x:"x",y:"ʏ",z:"ᴢ"
+      };
+      return smallCaps[c] || c;
+    }),
+    "Cursive": str => str.split("").map(c => {
+      if (/[a-z]/.test(c)) return String.fromCodePoint(c.charCodeAt(0) - 97 + 0x1D4B6);
+      if (/[A-Z]/.test(c)) return String.fromCodePoint(c.charCodeAt(0) - 65 + 0x1D49C);
+      return c;
+    }).join(""),
+    "Strikethrough": str => str.split("").map(c => c + "̶").join(""),
+    "Underline": str => str.split("").map(c => c + "̲").join("")
+  };
+
+  fontInput.addEventListener("input", () => {
+    const text = fontInput.value;
+    fontResults.innerHTML = "";
+
+    Object.keys(fontStyles).forEach(style => {
+      const styled = fontStyles[style](text);
+      const div = document.createElement("div");
+      div.className = "font-style";
+      div.innerHTML = `<strong>${style}:</strong> <span>${styled}</span> 
+        <button onclick="navigator.clipboard.writeText('${styled}')">Copy</button>`;
+      fontResults.appendChild(div);
+    });
+  });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the Instagram bio limit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Instagram bios allow up to 150 characters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Instagram caption limit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Instagram captions allow up to 2,200 characters."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why should I use this tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This free tool helps you count Instagram bio and caption characters in real-time so you can stay within the platform’s limits and optimize your content."
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
