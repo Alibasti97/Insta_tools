@@ -3,233 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram Hashtag Counter | Free Tool</title>
-  <meta name="description" content="Count your Instagram hashtags instantly! Free Instagram Hashtag Counter lets you paste hashtags and see how many you’ve used (max allowed = 30).">
-  <meta name="keywords" content="Instagram hashtag counter, Instagram hashtags, count hashtags, Instagram tools, free hashtag counter">
+  <title>Instagram Hashtag Counter | Free Online Tool (2025)</title>
+  <meta name="description" content="Free Instagram Hashtag Counter tool. Count your Instagram hashtags instantly, check the 30 hashtag limit, and optimize your posts for maximum reach and engagement.">
+  <meta name="keywords" content="Instagram hashtag counter, count Instagram hashtags, Instagram hashtag tool, free Instagram tools, Instagram hashtag limit, 30 hashtags Instagram, copy hashtags, Instagram SEO">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://freeinstatools.com/hashtags.html">
   <link rel="icon" href="assets/FIT.png" type="image/x-icon">
 
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f7f8fc;
-      color: #333;
-      line-height: 1.6;
-    }
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css?v=2">
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem 1rem;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
-    .logo {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: #ff2e63;
-    }
-
-    .logo span { color: #252a34; }
-
-    header nav a {
-      background: linear-gradient(135deg, #ff416c, #6a11cb);
-      color: #fff;
-      padding: 8px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s ease;
-    }
-
-    header nav a:hover {
-      background: linear-gradient(135deg, #6a11cb, #ff416c);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-        /* Hamburger button */
-    .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-    }
-
-    .hamburger span {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    border-radius: 2px;
-    }
-
-    /* Mobile menu styles */
-    @media screen and (max-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.5rem;
-    }
-
-    nav {
-        position: absolute;
-        top: 70px; /* below header */
-        right: 0;
-        background: #6a11cb;
-        flex-direction: column;
-        width: 200px;
-        border-radius: 8px;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.3s ease;
-    }
-
-    nav a {
-        padding: 12px 20px;
-        display: block;
-        background: #6a11cb;
-        color: #fff;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    nav a:last-child {
-        border-bottom: none;
-    }
-
-    nav.active {
-        max-height: 500px; /* expand menu */
-    }
-
-    .hamburger {
-        display: flex;
-    }
-    }
-
-
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      color: #6a11cb;
-      text-align: center;
-    }
-
-    p.subtitle {
-      text-align: center;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      color: #555;
-    }
-
-    .tool {
-      background: #fff;
-      padding: 2rem 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    textarea {
-      width: 100%;
-      min-height: 120px;
-      padding: 12px;
-      border-radius: 10px;
-      border: 2px solid #e5e5e5;
-      font-size: 1rem;
-      resize: vertical;
-      box-sizing: border-box;
-      margin-bottom: 10px;
-    }
-
-    .counter {
-      font-weight: bold;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    button {
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      border: none;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #fff;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    button:hover {
-      background: linear-gradient(135deg, #2575fc, #6a11cb);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(37,117,252,0.4);
-    }
-
-    article {
-      background: #fff;
-      padding: 2rem 1.5rem;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-      margin-bottom: 2rem;
-    }
-
-    article h2 { color: #6a11cb; }
-    article h3 { color: #2575fc; margin-top: 1.5rem; }
-
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #f9a826;
-      text-decoration: none;
-      margin: 0 5px;
-    }
-
-    footer a:hover { color: #fff; }
-
-    @media screen and (max-width: 768px) {
-      header { flex-direction: column; text-align: center; }
-      header nav { margin-top: 10px; }
-    }
-  </style>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
   <header>
-    <div class="logo">Free <span>Insta </span>Tools</div>  
+    <div class="logo">
+      <a href="home.html">
+        <img src="assets/FREE.svg" alt="Free Insta Tools Logo">
+      </a>
+    </div>
 
+    <!-- Hamburger -->
     <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
     <nav id="nav-menu">
-    <a href="index.html">Home</a>
-    <a href="hashtags.html">Hashtag Counter</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms & Conditions</a>
-  </nav>
-</header>
+      <a href="home.html">Home</a>
+      <a href="index.html">Bio & Caption Counter</a>
+      <a href="hashtags.html" class="active">Hashtag Counter</a>
+    </nav>
+  </header>
 
-  <div class="container">
-    <h1>Instagram Hashtag Counter</h1>
-    <p class="subtitle">Paste your Instagram hashtags below and see the count instantly. Instagram allows up to 30 hashtags per post.</p>
+  <main class="container">
+    <h1>Instagram Hashtag Counter – Free Online Tool</h1>
+    <p class="subtitle">
+      Use our free <strong>Instagram Hashtag Counter</strong> to instantly count your hashtags, check the <strong>30 hashtag limit</strong>, and copy them with one click. Perfect for influencers, creators, and businesses.
+    </p>
 
+    <!-- Tool Section -->
     <section class="tool">
       <textarea id="hashtags" placeholder="Paste your hashtags here..."></textarea>
       <div class="counter">
@@ -238,37 +54,62 @@
       <button id="copyBtn">📋 Copy Hashtags</button>
     </section>
 
+    <!-- SEO Content -->
     <article>
-      <h2>Why Use This Hashtag Counter?</h2>
-      <p>Instagram limits posts to <strong>30 hashtags</strong>. Using too many or too few hashtags can affect your post engagement. This free tool helps you count hashtags quickly and optimize your posts.</p>
+      <h2>Why Use an Instagram Hashtag Counter?</h2>
+      <p>
+        Instagram allows <strong>up to 30 hashtags per post</strong>. If you use more than 30, your caption may not publish correctly. This <strong>free hashtag counter</strong> helps you avoid mistakes and ensures your post is optimized for <strong>Instagram SEO</strong> and engagement.
+      </p>
 
-      <h3>How It Works</h3>
+      <h2>Benefits of Using Our Free Instagram Hashtag Tool</h2>
       <ul>
-        <li>Paste your hashtags into the box.</li>
-        <li>See the live count of hashtags used.</li>
-        <li>Copy and use them safely on Instagram without exceeding limits.</li>
+        <li>✔ Quickly <strong>count Instagram hashtags</strong> in real-time.</li>
+        <li>✔ Avoid exceeding the <strong>30 hashtag Instagram limit</strong>.</li>
+        <li>✔ Copy all your hashtags with a single click.</li>
+        <li>✔ Improve your <strong>Instagram growth</strong> with better hashtag strategy.</li>
+        <li>✔ 100% free, simple, and no sign-up required.</li>
       </ul>
 
-      <h3>FAQs</h3>
-      <p><strong>Q: What is the maximum number of hashtags allowed?</strong><br>A: Instagram allows up to 30 hashtags per post.</p>
-      <p><strong>Q: Can I copy all hashtags at once?</strong><br>A: Yes! Click the "Copy Hashtags" button to copy all text.</p>
+      <h2>How to Use the Instagram Hashtag Counter</h2>
+      <ol>
+        <li>Paste your hashtags into the box above.</li>
+        <li>See the live count update instantly.</li>
+        <li>Click “Copy Hashtags” to copy all text to your clipboard.</li>
+        <li>Use them in your Instagram post safely without exceeding the limit.</li>
+      </ol>
+
+      <h2>Best Practices for Instagram Hashtags</h2>
+      <p>
+        Using hashtags correctly can increase your reach and engagement. Here are some <strong>Instagram hashtag tips</strong>:
+      </p>
+      <ul>
+        <li>Mix <strong>popular hashtags</strong> (#love, #instagood) with <strong>niche hashtags</strong> for better targeting.</li>
+        <li>Don’t use the same hashtags in every post – vary them for better results.</li>
+        <li>Avoid banned hashtags to prevent shadowbans.</li>
+        <li>Stay within the <strong>30 hashtag limit</strong> to keep posts valid.</li>
+      </ul>
+
+      <h2>FAQs – Instagram Hashtag Counter</h2>
+      <p><strong>Q: How many hashtags can I use on Instagram?</strong><br>
+      A: Instagram allows up to <strong>30 hashtags</strong> per post.</p>
+
+      <p><strong>Q: Can I copy all hashtags at once?</strong><br>
+      A: Yes! Click the <em>“Copy Hashtags”</em> button to copy all your hashtags instantly.</p>
+
+      <p><strong>Q: Are hashtags important for Instagram growth?</strong><br>
+      A: Absolutely! Hashtags improve discoverability and help you reach a wider audience.</p>
+
+      <p><strong>Q: Is this Instagram Hashtag Counter free?</strong><br>
+      A: Yes, this is a <strong>100% free Instagram tool</strong> with no sign-up required.</p>
     </article>
-  </div>
+  </main>
 
   <footer>
     <p>© 2025 FreeInstaTool. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
   </footer>
 
+  <!-- Script: Hashtag Counter -->
   <script>
-
-    // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    });
-
     const hashtagsInput = document.getElementById("hashtags");
     const countDisplay = document.getElementById("count");
     const copyBtn = document.getElementById("copyBtn");
@@ -286,6 +127,58 @@
       document.execCommand("copy");
       alert("✅ Hashtags copied to clipboard!");
     });
+  </script>
+
+  <!-- Script: Hamburger -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+  <!-- FAQ Schema (SEO Rich Results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many hashtags can I use on Instagram?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Instagram allows up to 30 hashtags per post."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I copy all hashtags at once?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! Click the 'Copy Hashtags' button to copy all hashtags instantly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are hashtags important for Instagram growth?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, hashtags improve discoverability and help reach a wider audience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this Instagram Hashtag Counter free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, this is a 100% free Instagram tool with no sign-up required."
+        }
+      }
+    ]
+  }
   </script>
 </body>
 </html>

@@ -1,0 +1,770 @@
+/* ---------- Base Styles ---------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f7f8fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px; /* fixed height */
+  padding: 0 1.5rem; /* left/right padding only */
+  background: #2575fc;
+  background-size: 300% 300%;
+  color: #fff;
+  animation: gradientBG 10s ease infinite;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Logo inside header */
+header .logo img,
+header .logo svg {
+  height: 70px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 80px;
+    padding: 0 1rem;
+  }
+
+  header .logo img,
+  header .logo svg {
+    height: 60px;
+  }
+}
+
+/* ---------- Navigation Links ---------- */
+header nav a {
+  display: inline-block;
+  background: #ff2e63;
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+header nav a:hover {
+  background: #fff;
+  color: #ff2e63 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ---------- Gradient Animation ---------- */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  text-align: center;
+  margin: 40px auto 20px;
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 0;
+}
+
+/* ---------- Page Layout ---------- */
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px auto;
+  max-width: 1400px;
+  padding: 0 10px;
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  padding: 1rem;
+}
+
+/* ---------- Tool / Card Boxes ---------- */
+.tool,
+.content,
+.feature-card,
+.cta-card {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease;
+}
+
+/* ---------- Feature Cards ---------- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.feature-card h3 {
+  color: #6a11cb;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #555;
+}
+
+/* ---------- Why Choose Us ---------- */
+.why-us {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.why-us div {
+  background: #fdfdfd;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-weight: 600;
+  color: #333;
+}
+
+.why-us div:before {
+  content: "✅";
+  display: block;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* ---------- CTA Section ---------- */
+.cta-card {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.cta-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.cta-card p {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ---------- CTA Form ---------- */
+.cta-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cta-form input[type="email"] {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #e5e5e5;
+  width: 260px;
+  max-width: 100%;
+  font-size: 1rem;
+  outline: none;
+}
+
+.cta-form input[type="email"]:focus {
+  border-color: #2575fc;
+}
+
+.cta-form button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  background: #2575fc;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+.cta-form button:hover {
+  background: #fff;
+  color: #2575fc;
+  border: 2px solid #2575fc;
+}
+
+/* ---------- Hamburger ---------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ---------- Mobile Menu ---------- */
+@media screen and (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 90px;
+    right: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    z-index: 1000;
+  }
+
+  nav.active {
+    max-height: 500px;
+  }
+
+  nav a {
+    padding: 12px 20px;
+    display: block;
+    background: transparent;
+    color: #333 !important;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  nav a:hover {
+    background: #ff2e63;
+    color: #fff !important;
+  }
+
+  nav a:last-child {
+    border-bottom: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* ---------- Start Tool Button ---------- */
+.cta-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2575fc;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+.cta-btn:hover {
+  background: #fff;
+  color: #2575fc;
+  border-color: #2575fc;
+}
+
+.home .cta-btn {
+  background: #fff;
+  color: #2575fc;
+  border-color: #2575fc;
+}
+
+.home .cta-btn:hover {
+  background: #2575fc;
+  color: #fff;
+  border-color: transparent;
+}
+
+/* ---------- Content ---------- */
+h2 {
+  color: #6a11cb;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  color: #2575fc;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #555;
+}
+
+/* ---------- Sidebar Ads ---------- */
+.ad-container {
+  width: 160px;
+  min-height: 600px;
+  margin: 0 15px;
+  position: sticky;
+  top: 20px;
+}
+
+.ad-placeholder {
+  background: #f1f1f1;
+  border: 2px dashed #ccc;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer .footer-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+footer a {
+  color: #f9a826;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 1024px) {
+  .page-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    max-width: 90%;
+    padding: 1rem;
+  }
+  .ad-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 1rem;
+    height: 70px;
+  }
+  .logo img,
+  .logo svg {
+    height: 50px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 0.95rem;
+  }
+  .tool,
+  .content,
+  #font-generator {
+    padding: 1rem 0.8rem;
+  }
+  select,
+  #inputText,
+  #fontInput {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  .counter {
+    font-size: 0.9rem;
+  }
+  button {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+  .font-item span {
+    word-break: break-word;
+  }
+  .share-bar a {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+  .content h2,
+  .content h3 {
+    font-size: 1.2rem;
+  }
+  footer {
+    font-size: 13px;
+    padding: 15px;
+  }
+}
+
+
+/* INDEX.HTML */
+
+/* ---------- Headings ---------- */
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ---------- Tool Boxes ---------- */
+.tool:hover {
+  transform: translateY(-3px);
+}
+
+/* ---------- Forms & Inputs ---------- */
+label {
+  font-weight: 600;
+  color: #444;
+}
+
+select, textarea, #inputText, #fontInput {
+  display: block;
+  width: 100%;
+  margin: 0.8rem 0;
+  padding: 12px;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+#inputText, #fontInput {
+  min-height: 140px;
+  resize: vertical;
+}
+
+select:focus, textarea:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 6px rgba(106, 17, 203, 0.3);
+  outline: none;
+}
+
+/* ---------- Counters ---------- */
+.counter {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  border: none;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37,117,252,0.3);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37,117,252,0.4);
+}
+
+/* ---------- Content Headings ---------- */
+.content h2 {
+  color: #6a11cb;
+  margin-bottom: 0.5rem;
+}
+
+.content h3 {
+  margin-top: 1.5rem;
+  color: #2575fc;
+}
+
+strong {
+  color: #ff416c;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer .footer-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+footer a {
+  color: #f9a826;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* ---------- Social Share Bar ---------- */
+.share-bar {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.share-bar a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.share-bar a:hover {
+  transform: scale(1.1);
+}
+
+.fb { background: #3b5998; }
+.tw { background: #1da1f2; }
+.wa { background: #25d366; }
+.li { background: #0077b5; }
+
+/* ---------- Sidebar Ads ---------- */
+.ad-container {
+  width: 160px;
+  min-height: 600px;
+  margin: 0 15px;
+  position: sticky;
+  top: 20px;
+}
+
+.ad-placeholder {
+  background: #f1f1f1;
+  border: 2px dashed #ccc;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* ---------- Font Generator Styles ---------- */
+.font-results {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.font-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 1.1rem;
+}
+
+.font-item button, .font-style button {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border: none;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.font-item button:hover, .font-style button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+#font-generator {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.font-style {
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- Special Text Styles ---------- */
+.gradient-text {
+  background: linear-gradient(90deg, #ff4b1f, #ff9068, #ffdb00, #00e676, #2196f3, #9c27b0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.neon-text {
+  color: #00e5ff;
+  text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+  font-weight: bold;
+}
+
+.pastel-text {
+  color: #ff7eb9;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.3);
+}
+
+/* ---------- Hashtag Page Unique Styles ---------- */
+
+/* Header Logo (different size than index/home) */
+header .logo img,
+header .logo svg {
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 100px;
+  }
+  header .logo img,
+  header .logo svg {
+    height: 80px;
+  }
+}
+
+/* Mobile menu with #nav-menu ID */
+@media screen and (max-width: 768px) {
+  nav#nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav#nav-menu.active {
+    display: flex;
+  }
+
+  nav#nav-menu a {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff6b6b, #ff4e50);
+    color: #fff;
+  }
+
+  nav#nav-menu a:hover {
+    background: #fff;
+    color: #ff4e50;
+  }
+}
+
+/* Hashtag Counter Page Container */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+p.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Article Section */
+article {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+article h2 {
+  color: #6a11cb;
+}
+
+article h3 {
+  color: #2575fc;
+  margin-top: 1.5rem;
+}
+
+/* Mobile header tweak (only on hashtags.html) */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header nav {
+    margin-top: 10px;
+  }
+}
+
