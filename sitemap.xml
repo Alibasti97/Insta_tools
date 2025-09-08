@@ -1,23 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Home -->
   <url>
     <loc>https://freeinstatools.com/</loc>
-    <lastmod>2025-09-01</lastmod>
+    <lastmod>2025-09-03</lastmod>
     <priority>1.00</priority>
   </url>
+
+  <!-- Hashtags Tool -->
   <url>
     <loc>https://freeinstatools.com/hashtags</loc>
-    <lastmod>2025-09-01</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.90</priority>
   </url>
+
+  <!-- Captions & Bio Tool -->
+  <url>
+    <loc>https://freeinstatools.com/captions-bio</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://freeinstatools.com/about</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://freeinstatools.com/contact</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- Privacy Policy -->
   <url>
     <loc>https://freeinstatools.com/privacy</loc>
-    <lastmod>2025-09-01</lastmod>
+    <lastmod>2025-09-03</lastmod>
     <priority>0.50</priority>
   </url>
+
+  <!-- Terms & Conditions -->
   <url>
     <loc>https://freeinstatools.com/terms</loc>
-    <lastmod>2025-09-01</lastmod>
+    <lastmod>2025-09-03</lastmod>
     <priority>0.50</priority>
   </url>
+
 </urlset>

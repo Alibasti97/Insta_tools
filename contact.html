@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | FreeInstaTools</title>
+  <meta name="description" content="Get in touch with FreeInstaTools. Contact us for feedback, support, or suggestions for free Instagram tools including bio generator, caption counter, hashtag counter, and font generator.">
+  <meta name="keywords" content="contact FreeInstaTools, contact Instagram tools, free Instagram tools support, Instagram bio generator contact, Instagram caption counter help, Instagram hashtag counter support">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freeinstatools.com/contact.html">
+  <link rel="icon" href="assets/FIT.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/FREE.svg" alt="FreeInstaTools Logo">
+      </a>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="captions-bio.html">Bio & Caption Counter</a>
+      <a href="hashtags.html">Hashtag Counter</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p class="subtitle">We’d love to hear from you! Please fill out the form below and we’ll get back to you as soon as possible.</p>
+
+    <!-- Netlify Form -->
+    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 FreeInstaTools. All Rights Reserved. 
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms & Conditions</a> | 
+      <a href="about.html">About Us</a> |
+      <a href="contact.html">Contact Us</a>
+    </p>
+  </footer>
+
+  <!-- Hamburger Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

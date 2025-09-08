@@ -3,48 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Terms and Conditions for FreeInstaTool. Learn the rules and usage policies for our free tool.">
+  <meta name="description" content="Terms and Conditions for FreeInstaTool. Learn the rules, usage policies, and legal guidelines for using our free Instagram tools.">
+  <meta name="keywords" content="Free Instagram tools terms, FreeInstaTool conditions, Instagram tool policies, usage rules, legal disclaimer, free online tools terms">
+  
   <!-- Canonical URL -->
-<link rel="canonical" href="https://freeinstatools.com/" />
+  <link rel="canonical" href="https://freeinstatools.com/terms.html" />
 
-<!-- Favicon -->
-<link rel="icon" href="assets/FIT.png" type="image/x-icon" />
+  <!-- Favicon -->
+  <link rel="icon" href="assets/FIT.png" type="image/x-icon" />
+  <link rel="stylesheet" href="styles.css?v=2">
+
   <title>Terms & Conditions | FreeInstaTool</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; }
-    h1, h2 { color: #444; }
-    footer { margin-top: 40px; font-size: 14px; text-align: center; }
-    a { color: #0077cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
 </head>
 <body>
-  <h1>Terms & Conditions</h1>
-  <p>Welcome to <strong>FreeInstaTool</strong>. By using our website, you agree to the following terms and conditions:</p>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/FREE.svg" alt="Free Insta Tools Logo">
+      </a>
+    </div>
 
-  <h2>Use of Our Tool</h2>
-  <ul>
-    <li>FreeInstaTool is provided for personal, informational, and non-commercial use only.</li>
-    <li>You may not misuse or attempt to disrupt the functionality of the site.</li>
-    <li>We reserve the right to restrict or terminate access at any time without prior notice.</li>
-  </ul>
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-  <h2>Disclaimer</h2>
-  <p>FreeInstaTool is a free online utility. While we strive to provide accurate and reliable service, we do not guarantee uninterrupted or error-free operation. Use the tool at your own risk. We are not responsible for any damages or losses resulting from the use of this site.</p>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="captions-bio.html">Bio & Caption Counter</a>
+      <a href="hashtags.html">Hashtag Counter</a>
+    </nav>
+  </header>
 
-  <h2>Third-Party Links and Ads</h2>
-  <p>Our website may display third-party ads or contain external links. We are not responsible for the content, privacy practices, or policies of these third-party websites. Please review their respective privacy policies.</p>
+  <!-- Main Terms Content -->
+  <div class="container">
+    <h1>Terms & Conditions</h1>
+    <p>Welcome to <strong>FreeInstaTool</strong>. By accessing or using our website, you agree to the following terms and conditions:</p>
 
-  <h2>Changes to Terms</h2>
-  <p>We may revise these terms at any time. Continued use of the website constitutes acceptance of the updated terms. Please check this page periodically for updates.</p>
+    <h2>Use of Our Tool</h2>
+    <p>✅ FreeInstaTool is provided for personal, informational, and non-commercial use only.</p>
+    <p>✅ You may not misuse, exploit, or attempt to disrupt the functionality of the site.</p>
+    <p>✅ We reserve the right to restrict, suspend, or terminate access at any time without prior notice.</p>
 
-  <h2>Intellectual Property</h2>
-  <p>All content on FreeInstaTool, including text, graphics, and code, is the property of FreeInstaTool unless otherwise stated. You may not reproduce or distribute content without prior written permission.</p>
+    <h2>Disclaimer</h2>
+    <p>FreeInstaTool is a free online utility. While we strive to provide accurate and reliable services, we do not guarantee uninterrupted or error-free operation. You use the tool at your own risk, and we are not responsible for any damages, losses, or issues resulting from its use.</p>
 
-  <p><strong>Last Updated:</strong> August 31, 2025</p>
+    <h2>Third-Party Links and Ads</h2>
+    <p>Our website may display third-party advertisements or contain external links. We are not responsible for the content, privacy practices, or terms of these external websites. Please review their respective policies before interacting with them.</p>
 
+    <h2>Changes to Terms</h2>
+    <p>We may revise these Terms & Conditions at any time. Continued use of the website after changes means you accept the updated terms. Please check this page regularly for updates.</p>
+
+    <h2>Intellectual Property</h2>
+    <p>All content on FreeInstaTool, including text, graphics, design, and code, is the property of FreeInstaTool unless otherwise stated. You may not reproduce, copy, or distribute any content without prior written consent.</p>
+
+    <p><strong>Last Updated:</strong> August 31, 2025</p>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 FreeInstaTool. All Rights Reserved. | <a href="index.html">Home</a> | <a href="privacy.html">Privacy Policy</a></p>
+    <div class="footer-container">
+      <p>© 2025 FreeInstaTool. All Rights Reserved.</p>
+      <nav>
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html" class="active">Terms & Conditions</a> | 
+        <a href="about.html">About Us</a> |
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
   </footer>
+
+  <!-- Hamburger Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

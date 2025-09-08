@@ -3,55 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Privacy Policy for FreeInstaTool. Learn how we collect, use, and protect your data.">
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://freeinstatools.com/" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="assets/FIT.png" type="image/x-icon" />
   <title>Privacy Policy | FreeInstaTool</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; }
-    h1, h2 { color: #444; }
-    footer { margin-top: 40px; font-size: 14px; text-align: center; }
-    a { color: #0077cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+  <meta name="description" content="Privacy Policy for FreeInstaTool. Learn how we collect, use, and protect your data in compliance with Google AdSense and analytics.">
+  <meta name="keywords" content="Instagram tools privacy policy, FreeInstaTool data policy, cookies policy, AdSense privacy, analytics privacy">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://freeinstatools.com/privacy.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/FIT.png" type="image/x-icon" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>At <strong>FreeInstaTool</strong>, your privacy is very important to us. This Privacy Policy explains how we collect, use, and safeguard your information when you use our website.</p>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/FREE.svg" alt="Free Insta Tools Logo">
+      </a>
+    </div>
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="captions-bio.html">Bio & Caption Counter</a>
+      <a href="hashtags.html">Hashtag Counter</a>
+    </nav>
+  </header>
 
-  <h2>Information We Collect</h2>
-  <ul>
-    <li>We do not collect personal information unless you voluntarily provide it.</li>
-    <li>We may collect non-identifiable information such as browser type, device, IP address, and usage statistics through cookies or analytics tools.</li>
-    <li>Google AdSense may collect data to serve personalized ads in accordance with its privacy policies.</li>
-  </ul>
+  <!-- Main Privacy Content -->
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p>At <strong>FreeInstaTool</strong>, your privacy is very important to us. This Privacy Policy explains how we collect, use, and safeguard your information when you use our website.</p>
 
-  <h2>How We Use Information</h2>
-  <ul>
-    <li>To improve user experience and functionality of FreeInstaTool.</li>
-    <li>To analyze traffic, optimize performance, and enhance our services.</li>
-    <li>To display relevant ads as per Google AdSense policies.</li>
-  </ul>
+    <h2>Information We Collect</h2>
+    <p>✅ We do not collect personal information unless you voluntarily provide it.</p>
+    <p>✅ We may collect non-identifiable data such as browser type, device, IP address, and usage statistics via cookies or analytics tools.</p>
+    <p>✅ Google AdSense may collect data to serve personalized ads in accordance with its privacy policies.</p>
 
-  <h2>Third-Party Services</h2>
-  <p>We may use third-party services such as Google Analytics and Google AdSense, which may collect data in accordance with their own privacy policies. These services help us provide better content and personalized advertisements.</p>
+    <h2>How We Use Information</h2>
+    <p>✅ To improve user experience and functionality of FreeInstaTool.</p>
+    <p>✅ To analyze traffic, optimize performance, and enhance our services.</p>
+    <p>✅ To display relevant ads as per Google AdSense policies.</p>
 
-  <h2>Cookies</h2>
-  <p>Cookies are small text files stored on your device to enhance your browsing experience. You can disable cookies in your browser settings, but some features of the site may not work properly without them.</p>
+    <h2>Third-Party Services</h2>
+    <p>We use trusted third-party services like Google Analytics and Google AdSense, which may collect data in accordance with their own privacy policies. These services help us provide better content and personalized advertisements.</p>
 
-  <h2>Security</h2>
-  <p>We take appropriate measures to protect your data from unauthorized access, alteration, or disclosure. However, no method of transmission over the Internet is completely secure.</p>
+    <h2>Cookies</h2>
+    <p>Cookies are small text files stored on your device to enhance browsing experience. You can disable cookies in your browser, but some features may not work properly without them.</p>
 
-  <h2>Updates</h2>
-  <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with a new "Last Updated" date. Please check back periodically.</p>
+    <h2>Security</h2>
+    <p>We take appropriate measures to protect your data from unauthorized access, alteration, or disclosure. However, no method of transmission over the Internet is completely secure.</p>
 
-  <p><strong>Last Updated:</strong> August 31, 2025</p>
+    <h2>Updates</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with a new "Last Updated" date. Please check back periodically.</p>
 
+    <p><strong>Last Updated:</strong> August 31, 2025</p>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 FreeInstaTool. All Rights Reserved. | <a href="index.html">Home</a> | <a href="terms.html">Terms & Conditions</a></p>
+    <div class="footer-container">
+      <p>© 2025 FreeInstaTool. All Rights Reserved.</p>
+      <nav>
+        <a href="privacy.html" class="active">Privacy Policy</a> | 
+        <a href="terms.html">Terms & Conditions</a> | 
+        <a href="about.html">About Us</a> |
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
   </footer>
+
+  <!-- Hamburger Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
