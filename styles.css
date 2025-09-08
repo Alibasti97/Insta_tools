@@ -505,7 +505,7 @@ button {
   padding: 0.9rem;
   border: none;
   font-size: 1rem;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: #2575fc;
   color: #fff;
   border-radius: 12px;
   cursor: pointer;
@@ -514,8 +514,9 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(135deg, #2575fc, #6a11cb);
-  transform: translateY(-2px);
+  background: #fff;
+  color: #2575fc;
+  border: #2575fc 2px solid;
   box-shadow: 0 6px 16px rgba(37,117,252,0.4);
 }
 
