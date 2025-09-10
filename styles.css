@@ -330,26 +330,6 @@ p {
   color: #555;
 }
 
-/* ---------- Sidebar Ads ---------- */
-.ad-container {
-  width: 160px;
-  min-height: 600px;
-  margin: 0 15px;
-  position: sticky;
-  top: 20px;
-}
-
-.ad-placeholder {
-  background: #f1f1f1;
-  border: 2px dashed #ccc;
-  height: 600px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  color: #555;
-}
 
 /* ---------- Footer ---------- */
 footer {
@@ -586,27 +566,6 @@ footer a:hover {
 .tw { background: #1da1f2; }
 .wa { background: #25d366; }
 .li { background: #0077b5; }
-
-/* ---------- Sidebar Ads ---------- */
-.ad-container {
-  width: 160px;
-  min-height: 600px;
-  margin: 0 15px;
-  position: sticky;
-  top: 20px;
-}
-
-.ad-placeholder {
-  background: #f1f1f1;
-  border: 2px dashed #ccc;
-  height: 600px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  color: #555;
-}
 
 /* ---------- Font Generator Styles ---------- */
 .font-results {
@@ -1052,51 +1011,6 @@ footer {
 }
 
 
-/* Ads on Blogs Page */
-
-.page-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  max-width: 1400px;
-  margin: 20px auto;
-}
-
-.page-container main {
-  flex: 1;
-  max-width: 900px;
-}
-
-.ad-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.ad-placeholder {
-  background: #f2f2f2;
-  border: 1px dashed #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  color: #555;
-}
-
-/* Specific Ad Sizes */
-.top-ad .ad-placeholder {
-  width: 728px;
-  height: 90px;
-}
-
-.left-ad .ad-placeholder,
-.right-ad .ad-placeholder {
-  width: 160px;
-  height: 600px;
-}
-
 /* Read all blogs button */
 
 .blog-button-container {
@@ -1118,5 +1032,3 @@ footer {
   border: 2px solid #007bff;
   color: #007bff;
 }
-
-
