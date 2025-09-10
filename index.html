@@ -22,6 +22,16 @@
 
   <link rel="stylesheet" href="styles.css?v=2">
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEPPF7H8B3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-JEPPF7H8B3');
+  </script>
+
 </head>
 
 <body>
@@ -42,6 +52,8 @@
       <a href="index.html" class="active">Home</a>
       <a href="captions-bio.html">Bio & Caption Counter</a>
       <a href="hashtags.html">Hashtag Counter</a>
+      <a href="blogs/blogs.html">Blogs</a>
+
     </nav>
   </header>
 
@@ -167,7 +179,60 @@
     </aside>
   </div>
 
-  <!-- CTA / Newsletter -->
+   <!-- Blog Slider Section -->
+  <section class="blog-slider">
+    <h2 class="section-title">Latest Blogs</h2>
+    <div class="slider-container">
+      <div class="slider-track">
+        
+        <!-- Blog Card 1 -->
+        <article class="blog-card">
+          <img src="assets/growth ideas.png" alt="Instagram Growth Tips">
+          <h3>5 Instagram Growth Tips</h3>
+          <p>Learn how to boost your Instagram reach with these proven strategies.</p>
+        </article>
+        
+        <!-- Blog Card 2 -->
+        <article class="blog-card">
+          <img src="assets/hashtag strategy.png" alt="Hashtag Strategy">
+          <a href="blogs/blog-hashtag-strategy.html"><h3>Best Hashtag Strategy</h3></a>
+          <p>Master the art of hashtags to maximize engagement on your posts.</p>
+        </article>
+        
+        <!-- Blog Card 3 -->
+        <article class="blog-card">
+          <img src="assets/insta bio ideas.png" alt="Bio Ideas">
+          <h3>Creative Instagram Bio Ideas</h3>
+          <p>Stand out with these unique and professional bio examples.</p>
+        </article>
+        <!-- Duplicate cards for infinite loop -->
+        <article class="blog-card">
+          <img src="assets/growth ideas.png" alt="Instagram Growth Tips">
+          <h3>5 Instagram Growth Tips</h3>
+          <p>Learn how to boost your Instagram reach with these proven strategies.</p>
+        </article>
+        <article class="blog-card">
+          <img src="assets/hashtag strategy.png" alt="Hashtag Strategy">
+          <a href="blogs/blog-hashtag-strategy.html"><h3>Best Hashtag Strategy Ever!!!</h3></a>
+          <p>Master the art of hashtags to maximize engagement on your posts.</p>
+        </article>
+        <article class="blog-card">
+          <img src="assets/insta bio ideas.png" alt="Bio Ideas">
+          <h3>Creative Instagram Bio Ideas</h3>
+          <p>Stand out with these unique and professional bio examples.</p>
+        </article>
+
+      </div>
+    </div>
+
+     <!-- Read Blogs Button -->
+  <div class="blog-button-container">
+    <a href="blogs/blogs.html" class="read-blogs-btn">Read All Blogs</a>
+  </div>
+  </section>
+
+
+  <!-- CTA / Newsletter
     <section class="cta-card">
     <h2>Stay Updated on New Tools!</h2>
     <p>Subscribe for updates on new Instagram tools and features.</p>
@@ -176,7 +241,7 @@
         <input type="email" placeholder="Enter your email" />
         <button>Subscribe</button>
     </div>
-    </section>
+    </section> -->
 
   <!-- Footer -->
   <footer>

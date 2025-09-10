@@ -8,44 +8,96 @@
     <priority>1.00</priority>
   </url>
 
-  <!-- Hashtags Tool -->
+  <!-- Tools -->
   <url>
-    <loc>https://freeinstatools.com/hashtags</loc>
+    <loc>https://freeinstatools.com/hashtags.html</loc>
     <lastmod>2025-09-03</lastmod>
     <priority>0.90</priority>
   </url>
 
-  <!-- Captions & Bio Tool -->
   <url>
-    <loc>https://freeinstatools.com/captions-bio</loc>
+    <loc>https://freeinstatools.com/captions-bio.html</loc>
     <lastmod>2025-09-03</lastmod>
     <priority>0.90</priority>
   </url>
 
-  <!-- About Us -->
+  <!-- Blog Index -->
   <url>
-    <loc>https://freeinstatools.com/about</loc>
+    <loc>https://freeinstatools.com/blogs/blogs.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Blogs -->
+  <url>
+    <loc>https://freeinstatools.com/blogs/best-bio-generator.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://freeinstatools.com/blogs/best-bio-ideas.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://freeinstatools.com/blogs/best-instagram-caption-ideas.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://freeinstatools.com/blogs/blog-hashtag-strategy.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://freeinstatools.com/blogs/insta-growth-hacks.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://freeinstatools.com/blogs/instagram-growth-tips.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://freeinstatools.com/blogs/instagram-hashtags-2025.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://freeinstatools.com/blogs/write-catchy-insta-captions.html</loc>
+    <lastmod>2025-09-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Static Pages -->
+  <url>
+    <loc>https://freeinstatools.com/about.html</loc>
     <lastmod>2025-09-03</lastmod>
     <priority>0.60</priority>
   </url>
 
-  <!-- Contact Us -->
   <url>
-    <loc>https://freeinstatools.com/contact</loc>
+    <loc>https://freeinstatools.com/contact.html</loc>
     <lastmod>2025-09-03</lastmod>
     <priority>0.60</priority>
   </url>
 
-  <!-- Privacy Policy -->
   <url>
-    <loc>https://freeinstatools.com/privacy</loc>
+    <loc>https://freeinstatools.com/privacy.html</loc>
     <lastmod>2025-09-03</lastmod>
     <priority>0.50</priority>
   </url>
 
-  <!-- Terms & Conditions -->
   <url>
-    <loc>https://freeinstatools.com/terms</loc>
+    <loc>https://freeinstatools.com/terms.html</loc>
     <lastmod>2025-09-03</lastmod>
     <priority>0.50</priority>
   </url>
