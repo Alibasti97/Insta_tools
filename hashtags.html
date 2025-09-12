@@ -17,20 +17,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7707146227865248"
-     crossorigin="anonymous"></script>
-  <!-- Google tag (gtag.js) -->
+  <!-- Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7707146227865248" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JEPPF7H8B3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-JEPPF7H8B3');
   </script>
-
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="logo">
       <a href="index.html">
@@ -45,33 +45,94 @@
       <span></span>
     </div>
 
+    <!-- Navigation -->
     <nav id="nav-menu">
       <a href="index.html">Home</a>
       <a href="captions-bio.html">Bio & Caption Counter</a>
-      <a href="hashtags.html" class="active">Hashtag Counter</a>
+      <a href="hashtags.html" class="active">Generate Hashtags</a>
       <a href="fonts.html">Fonts Generator</a>
       <a href="engagement-calculator.html">Engagement Calculator</a>
       <a href="blogs/blogs.html">Blogs</a>
     </nav>
   </header>
 
-    <!-- Main Content -->
-    <main class="container">
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Hashtag Generator -->
+    <section id="generator">
+      <h1>Instagram Hashtag Generator (2025)</h1>
+      <p>Select a category and get 10 random hashtags instantly. Copy and paste them directly into your Instagram posts, bios, or stories.</p>
+
+      <select id="categorySelect">
+        <option value="">Select a Category</option>
+      </select>
+
+      <div id="hashtagsContainer" style="margin-top:20px;"></div>
+      <button id="copyAllBtn" style="display:none; margin-top:15px;">Copy All</button>
+    </section>
+
+    <!-- SEO Content -->
+    <section id="seo-content" style="margin-top:40px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.7; color:#333;">
+      <h2>Free Instagram Hashtags Generator – Boost Your Reach</h2>
+      <p>
+        Looking for the best <strong>Instagram Hashtags Generator</strong> to increase your engagement and reach? 
+        Our free tool helps you generate trending, popular, and niche-specific hashtags that make your posts more discoverable. 
+        Whether you’re growing a personal profile, small business, or influencer account, the right hashtags can bring your content 
+        in front of thousands of new users.
+      </p>
+
+      <h3>Why Use a Hashtag Generator?</h3>
+      <ul>
+        <li>Discover <strong>trending Instagram hashtags</strong> relevant to your niche.</li>
+        <li>Save time by generating hashtags instantly instead of researching manually.</li>
+        <li>Boost your <strong>Instagram engagement rate</strong> by reaching a wider audience.</li>
+        <li>Get hashtags for every category – travel, food, fashion, fitness, pets, beauty, tech, crypto, and more.</li>
+      </ul>
+
+      <h3>How Our Hashtags Tool Works</h3>
+      <p>
+        Simply select a category, and our <strong>Instagram hashtags generator</strong> will instantly show you 
+        10 random hashtags from a curated list of thousands of popular and trending hashtags. 
+        With one click, you can copy them and paste into your Instagram post or reel.
+      </p>
+
+      <h3>Best Practices for Instagram Hashtags</h3>
+      <p>
+        Instagram allows up to 30 hashtags per post, but using <strong>10–15 highly relevant hashtags</strong> 
+        often performs better. Mix popular, medium, and niche hashtags to balance reach and competition. 
+        Always make sure the hashtags match your content for the best results.
+      </p>
+
+      <h3>Other Free Tools You Can Try</h3>
+      <ul>
+        <li><a href="engagement-calculator.html">Instagram Engagement Rate Calculator</a> – Check influencer engagement rates.</li>
+        <li><a href="fonts.html">Instagram Fonts Generator</a> – Create stylish bios and captions with custom fonts.</li>
+        <li><a href="hashtags.html">Hashtags Generator</a> – Generate free hashtags for any category or niche.</li>
+      </ul>
+
+      <p>
+        Our goal is to provide simple and free Instagram marketing tools like hashtag generators, 
+        engagement calculators, and fonts creators – all in one place.
+      </p>
+    </section>
+
+    <!-- Hashtag Counter -->
+    <section id="counter" style="margin-top:40px;">
       <h1>Instagram Hashtag Counter – Free Online Tool</h1>
       <p class="subtitle">
         Use our free <strong>Instagram Hashtag Counter</strong> to instantly count your hashtags, check the <strong>30 hashtag limit</strong>, and copy them with one click. Perfect for influencers, creators, and businesses.
       </p>
 
       <!-- Tool Section -->
-      <section class="tool">
+      <div class="tool">
         <textarea id="hashtags" placeholder="Paste your hashtags here..."></textarea>
         <div class="counter">
           Hashtags used: <span id="count">0</span>/30
         </div>
         <button id="copyBtn">Copy Hashtags</button>
-      </section>
+      </div>
 
-      <!-- SEO Content -->
+      <!-- SEO Content for Counter -->
       <article>
         <h2>Why Use an Instagram Hashtag Counter?</h2>
         <p>
@@ -119,8 +180,10 @@
         <p><strong>Q: Is this Instagram Hashtag Counter free?</strong><br>
         A: Yes, this is a <strong>100% free Instagram tool</strong> with no sign-up required.</p>
       </article>
-    </main>
+    </section>
+  </main>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 FreeInstaTool. All rights reserved. | 
       <a href="privacy.html">Privacy Policy</a> | 
@@ -130,7 +193,66 @@
     </p>
   </footer>
 
-  <!-- Script: Hashtag Counter -->
+  <!-- Scripts -->
+  <script>
+    let hashtagsData = {};
+    let currentHashtags = [];
+
+    // Fetch hashtags.json
+    fetch("data/hashtags.json")
+      .then(res => res.json())
+      .then(data => {
+        hashtagsData = data;
+        const categorySelect = document.getElementById("categorySelect");
+
+        // Populate categories in dropdown
+        Object.keys(hashtagsData).forEach(category => {
+          const option = document.createElement("option");
+          option.value = category;
+          option.textContent = category;
+          categorySelect.appendChild(option);
+        });
+      });
+
+    // Handle category selection
+    document.getElementById("categorySelect").addEventListener("change", function () {
+      const selectedCategory = this.value;
+      const hashtagsContainer = document.getElementById("hashtagsContainer");
+      const copyAllBtn = document.getElementById("copyAllBtn");
+
+      hashtagsContainer.innerHTML = "";
+      copyAllBtn.style.display = "none";
+
+      if (selectedCategory && hashtagsData[selectedCategory]) {
+        const allTags = [...hashtagsData[selectedCategory]];
+        currentHashtags = allTags.sort(() => 0.5 - Math.random()).slice(0, 10);
+
+        const ul = document.createElement("ul");
+        ul.style.listStyle = "none";
+        ul.style.padding = "0";
+
+        currentHashtags.forEach(tag => {
+          const li = document.createElement("li");
+          li.style.margin = "6px 0";
+          li.textContent = tag;
+          ul.appendChild(li);
+        });
+
+        hashtagsContainer.appendChild(ul);
+        copyAllBtn.style.display = "inline-block";
+      }
+    });
+
+    // Copy all shown hashtags
+    document.getElementById("copyAllBtn").addEventListener("click", function () {
+      if (currentHashtags.length > 0) {
+        const textToCopy = currentHashtags.join(" ");
+        navigator.clipboard.writeText(textToCopy);
+        alert("Copied: " + textToCopy);
+      }
+    });
+  </script>
+
   <script>
     const hashtagsInput = document.getElementById("hashtags");
     const countDisplay = document.getElementById("count");
@@ -151,17 +273,16 @@
     });
   </script>
 
-  <!-- Script: Hamburger -->
+  <!-- Hamburger Menu -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
-
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
   </script>
 
-  <!-- FAQ Schema (SEO Rich Results) -->
+  <!-- FAQ Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -201,6 +322,20 @@
       }
     ]
   }
+  </script>
+
+  <!-- Example Hashtag Loader -->
+  <script>
+    async function loadHashtags() {
+      const response = await fetch("data/hashtags.json");
+      const hashtags = await response.json();
+      const travelHashtags = hashtags.travel;
+      const container = document.getElementById("hashtagsOutput");
+      if(container){
+        container.innerHTML = travelHashtags.map(tag => `<span>${tag}</span>`).join(" ");
+      }
+    }
+    loadHashtags();
   </script>
 </body>
 </html>

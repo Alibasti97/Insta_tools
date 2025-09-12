@@ -110,7 +110,6 @@ main {
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   margin-bottom: 2rem;
-  transition: transform 0.2s ease;
 }
 
 /* ---------- Feature Cards ---------- */
@@ -436,11 +435,6 @@ h1 {
   margin-top: 0.5rem;
   font-size: 1.1rem;
   opacity: 0.9;
-}
-
-/* ---------- Tool Boxes ---------- */
-.tool:hover {
-  transform: translateY(-3px);
 }
 
 /* ---------- Forms & Inputs ---------- */
@@ -1180,3 +1174,29 @@ footer {
         padding: 15px;
       }
     }
+/* Hashtag Generator */
+#copyBtn {
+  margin-top: 15px;
+  padding: 10px 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  display: none; /* hidden initially */
+}
+
+/* Hover effect */
+#copyBtn:hover {
+  background-color: #45a049;
+  transform: scale(1.03);
+}
+
+/* Active/pressed state */
+#copyBtn:active {
+  background-color: #3e8e41;
+  transform: scale(0.97);
+}
