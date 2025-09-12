@@ -118,16 +118,6 @@
         <button id="copyBtn">Copy Text</button>
       </section>
 
-      <!-- Font Generator Tool -->
-      <section id="font-generator" class="tool">
-        <h2>Instagram Font Generator</h2>
-        <p>
-          Convert your normal text into <strong>stylish Instagram fonts</strong>. Copy and paste them directly into your bio, captions, or comments to make your posts stand out.
-        </p>
-        <textarea id="fontInput" placeholder="Type your text here..."></textarea>
-        <div id="fontResults" class="font-results"></div>
-      </section>
-
       <!-- Expanded SEO Content -->
       <article class="content">
         <h2>Understanding Instagram Bio & Caption Limits</h2>
@@ -226,48 +216,7 @@
       alert("✅ Text copied to clipboard!");
     });
 
-    /* Font Generator Script */
-    const fontInput = document.getElementById("fontInput");
-    const fontResults = document.getElementById("fontResults");
 
-    const fontStyles = {
-      "Bold": str => str.split("").map(c => String.fromCodePoint(c.charCodeAt(0) + 0x1D400 - 0x41)).join(""),
-      "Italic": str => str.split("").map(c => String.fromCodePoint(c.charCodeAt(0) + 0x1D434 - 0x41)).join(""),
-      "Monospace": str => str.split("").map(c => String.fromCodePoint(c.charCodeAt(0) + 0x1D670 - 0x41)).join(""),
-      "Bubble": str => str.split("").map(c => {
-        if (/[a-z]/.test(c)) return String.fromCodePoint(c.charCodeAt(0) - 97 + 0x1D552);
-        if (/[A-Z]/.test(c)) return String.fromCodePoint(c.charCodeAt(0) - 65 + 0x1D538);
-        return c;
-      }).join(""),
-      "Small Caps": str => str.toLowerCase().replace(/[a-z]/g, c => {
-        const smallCaps = {
-          a:"ᴀ",b:"ʙ",c:"ᴄ",d:"ᴅ",e:"ᴇ",f:"ꜰ",g:"ɢ",h:"ʜ",i:"ɪ",j:"ᴊ",k:"ᴋ",l:"ʟ",m:"ᴍ",
-          n:"ɴ",o:"ᴏ",p:"ᴘ",q:"ǫ",r:"ʀ",s:"s",t:"ᴛ",u:"ᴜ",v:"ᴠ",w:"ᴡ",x:"x",y:"ʏ",z:"ᴢ"
-        };
-        return smallCaps[c] || c;
-      }),
-      "Cursive": str => str.split("").map(c => {
-        if (/[a-z]/.test(c)) return String.fromCodePoint(c.charCodeAt(0) - 97 + 0x1D4B6);
-        if (/[A-Z]/.test(c)) return String.fromCodePoint(c.charCodeAt(0) - 65 + 0x1D49C);
-        return c;
-      }).join(""),
-      "Strikethrough": str => str.split("").map(c => c + "̶").join(""),
-      "Underline": str => str.split("").map(c => c + "̲").join("")
-    };
-
-    fontInput.addEventListener("input", () => {
-      const text = fontInput.value;
-      fontResults.innerHTML = "";
-
-      Object.keys(fontStyles).forEach(style => {
-        const styled = fontStyles[style](text);
-        const div = document.createElement("div");
-        div.className = "font-style";
-        div.innerHTML = `<strong>${style}:</strong> <span>${styled}</span> 
-          <button onclick="navigator.clipboard.writeText('${styled}')">Copy</button>`;
-        fontResults.appendChild(div);
-      });
-    });
   </script>
 
   <!-- FAQ Schema -->
