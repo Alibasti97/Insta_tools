@@ -41,31 +41,6 @@ header .logo svg {
   }
 }
 
-/* ---------- Navigation Links ---------- */
-header nav a {
-  display: inline-block;
-  background: #ff2e63;
-  color: #fff !important;
-  padding: 8px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-header nav a:hover {
-  background: #fff;
-  color: #ff2e63 !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* ---------- Gradient Animation ---------- */
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 /* ---------- Hero ---------- */
 .hero {
   text-align: center;
@@ -236,52 +211,6 @@ main {
 }
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* ---------- Mobile Menu ---------- */
-@media screen and (max-width: 768px) {
-  nav {
-    position: absolute;
-    top: 90px;
-    right: 1rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    z-index: 1000;
-  }
-
-  nav.active {
-    max-height: 500px;
-  }
-
-  nav a {
-    padding: 12px 20px;
-    display: block;
-    background: transparent;
-    color: #333 !important;
-    border-bottom: 1px solid #eee;
-    text-align: left;
-    transition: background 0.3s ease, color 0.3s ease;
-  }
-
-  nav a:hover {
-    background: #ff2e63;
-    color: #fff !important;
-  }
-
-  nav a:last-child {
-    border-bottom: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
 }
 
 /* ---------- Start Tool Button ---------- */
@@ -651,31 +580,6 @@ header .logo svg {
   }
 }
 
-/* Mobile menu with #nav-menu ID */
-@media screen and (max-width: 768px) {
-  nav#nav-menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  nav#nav-menu.active {
-    display: flex;
-  }
-
-  nav#nav-menu a {
-    padding: 8px 12px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #ff6b6b, #ff4e50);
-    color: #fff;
-  }
-
-  nav#nav-menu a:hover {
-    background: #fff;
-    color: #ff4e50;
-  }
-}
 
 /* Hashtag Counter Page Container */
 .container {
@@ -708,18 +612,6 @@ article h3 {
   color: #2575fc;
   margin-top: 1.5rem;
 }
-
-/* Mobile header tweak (only on hashtags.html) */
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-  header nav {
-    margin-top: 10px;
-  }
-}
-
 
 /* Contact Form Styling */
 .contact-form {
@@ -1192,11 +1084,236 @@ footer {
 /* Hover effect */
 #copyBtn:hover {
   background-color: #45a049;
-  transform: scale(1.03);
 }
 
 /* Active/pressed state */
 #copyBtn:active {
   background-color: #3e8e41;
-  transform: scale(0.97);
+}
+
+
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #673ab7;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    main {
+      width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+    }
+    h1, h2 {
+      color: #444;
+    }
+    select, button {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #fff;
+      color: #007bff;
+    }
+    #results {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f1f1f1;
+      border-radius: 6px;
+      min-height: 100px;
+    }
+    .caption-item {
+      margin-bottom: 10px;
+      padding: 8px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .copy-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #4caf50;
+      padding: 8px 12px;
+      border-radius: 5px;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background: #fff;
+      color: #4caf50;
+      border: 2px solid #4caf50;
+    }
+  
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+  /* Force all FAQ question buttons to same width */
+  .faq-toggle {
+    width: 100%;
+    min-height: 50px;
+  }
+
+  .question-text {
+    flex: 1; /* ensures text area grows equally */
+    white-space: normal; /* wrap long text */
+  }
+
+  .icon {
+    margin-left: 10px;
+    flex-shrink: 0;
+  }
+
+  /* ====== NAVBAR BASE ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2575fc;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+}
+
+/* Nav menu */
+#nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 100;
+  transition: color 0.3s;
+}
+
+#nav-menu a:hover {
+  color: #ff416c;
+}
+
+/* ====== DROPDOWN ====== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown > a {
+  cursor: pointer;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* right below the button */
+  left: 0;
+  background: #2575fc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-width: 200px;
+  z-index: 999;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover {
+  background: #f5f5f5;
+}
+
+/* Show dropdown on hover (desktop) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ====== HAMBURGER ====== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  #nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #2575fc;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 15px;
+    gap: 15px;
+    width: 200px;
+  }
+
+  #nav-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Make dropdown expand inside mobile menu */
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding-left: 10px;
+  }
+
+  .dropdown-content a {
+    padding: 8px 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 }

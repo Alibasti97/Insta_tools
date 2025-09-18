@@ -53,112 +53,168 @@
 
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <div class="logo">
-      <a href="index.html">
+   <!-- Navbar -->
+<header>
+  <div class="logo">
+    <a href="index.html">
         <img src="assets/FREE.svg" alt="Free Insta Tools Logo">
-      </a>
+    </a>
+  </div>
+  <!-- Hamburger -->
+  <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
+  <nav id="nav-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="captions-bio.html">Bio & Caption Counter</a>
+     <!-- More Tools Dropdown -->
+    <div class="dropdown">
+      <a href="#">More Tools ▾</a>
+      <div class="dropdown-content">
+         <a href="captions-generator.html">Generate Captions</a>
+    <a href="hashtags.html">Generate Hashtags</a>
+    <a href="fonts.html">Fonts Generator</a>
+    <a href="engagement-calculator.html">Engagement Calculator</a>
+      </div>
     </div>
-    <!-- Hamburger -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <a href="blogs/blogs.html">Blogs</a>
+  </nav>
+</header>
+
+  <!-- Main Tool + SEO Content -->
+<main style="align-self: center; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.7;">
+  
+  <h1 style="text-align:center;">Instagram Bio & Caption Character Counter – Free Online Tool</h1>
+  
+  <p>
+    Writing the perfect Instagram bio or caption can be a challenge, especially when you’re limited by strict character counts. 
+    Instagram allows only <strong>150 characters for bios</strong> and <strong>2,200 characters for captions</strong>. 
+    That’s why we created this <strong>free Instagram character counter tool</strong>. It helps influencers, businesses, content creators, and everyday users 
+    stay within limits, optimize their posts, and maximize engagement.
+  </p>
+
+  <!-- Tool Section -->
+  <section class="tool">
+    <h2>Use the Instagram Character Counter</h2>
+    <label for="mode">Choose Mode:</label>
+    <select id="mode">
+      <option value="150">Instagram Bio (150 limit)</option>
+      <option value="2200">Instagram Caption (2200 limit)</option>
+    </select>
+
+    <textarea id="inputText" placeholder="Type or paste your bio/caption here..."></textarea>
+    <div class="counter">
+      <span id="charCount">0</span>/<span id="charLimit">150</span> characters
     </div>
-    <nav id="nav-menu">
-      <a href="index.html" class="active">Home</a>
-      <a href="captions-bio.html">Bio & Caption Counter</a>
-      <a href="hashtags.html">Generate Hashtags</a>
-      <a href="fonts.html">Fonts Generator</a>
-      <a href="engagement-calculator.html">Engagement Calculator</a>
-      <a href="blogs/blogs.html">Blogs</a>
 
-    </nav>
-  </header>
+    <button id="copyBtn">Copy Text</button>
+  </section>
 
-    <!-- Main Tool + SEO Content -->
-    <main style="align-self: center;">
-      <h1 style="text-align:center;">Instagram Bio & Caption Character Counter</h1>
-      <p>
-        Use our free <strong>Instagram Bio & Caption Character Counter</strong> to instantly count characters, optimize your text, and stay within Instagram’s limits: 
-        <strong>150 characters for bios</strong> and <strong>2,200 characters for captions</strong>. 
-        Ideal for <em>influencers, content creators, marketers, and businesses</em> who want to maximize engagement.
-      </p>
+  <!-- Expanded SEO Content -->
+  <article class="content">
+    <h2>Why Use an Instagram Bio & Caption Character Counter?</h2>
+    <p>
+      Instagram is one of the most popular social media platforms in the world, and standing out requires attention to detail. 
+      The words you choose for your bio and captions can affect whether someone follows you, engages with your content, or scrolls past. 
+      Our <strong>Instagram character counter</strong> ensures your text is within the official limits so you don’t waste time writing captions that get cut off.
+    </p>
+    <ul>
+      <li>✔ Real-time <strong>character count</strong> as you type.</li>
+      <li>✔ Switch between <strong>bio mode (150)</strong> and <strong>caption mode (2200)</strong>.</li>
+      <li>✔ Helps avoid Instagram errors caused by exceeding limits.</li>
+      <li>✔ Optimized for <strong>SEO-friendly Instagram content</strong>.</li>
+      <li>✔ 100% free, no login or signup required.</li>
+    </ul>
 
-      <h2>Why Use This Instagram Character Counter?</h2>
-      <ul>
-        <li>✔ Real-time <strong>character counting</strong> as you type or paste text.</li>
-        <li>✔ Switch between <strong>bio (150)</strong> and <strong>caption (2200)</strong> modes.</li>
-        <li>✔ Prevents errors by ensuring you don’t exceed Instagram’s limits.</li>
-        <li>✔ Helps craft optimized Instagram content for <strong>better SEO and engagement</strong>.</li>
-        <li>✔ 100% free, simple, and no login required.</li>
-      </ul>
+    <h2>Understanding Instagram Character Limits</h2>
+    <p>
+      Every platform has unique restrictions, and Instagram is no exception. 
+      Knowing the <strong>Instagram bio character limit</strong> and <strong>caption character limit</strong> is essential to create 
+      text that fits perfectly and enhances your overall Instagram strategy.
+    </p>
+    <h3>Instagram Bio Limit</h3>
+    <p>
+      Your Instagram bio is limited to <strong>150 characters</strong>. 
+      This space should communicate who you are, what you do, or why someone should follow you. 
+      Many influencers and businesses use emojis, short phrases, or CTAs like “📩 DM for collaborations” to maximize impact.
+    </p>
+    <h3>Instagram Caption Limit</h3>
+    <p>
+      Instagram captions can be up to <strong>2,200 characters</strong>. 
+      While this is plenty of space, only the first 125 characters show before users have to tap “See More.” 
+      That makes the first line of your caption the most important for grabbing attention. 
+      Our tool helps you plan both short and long captions without risk of exceeding the character count.
+    </p>
 
-      <!-- Tool Section -->
-      <section class="tool">
-        <label for="mode">Choose Mode:</label>
-        <select id="mode">
-          <option value="150">Instagram Bio (150 limit)</option>
-          <option value="2200">Instagram Caption (2200 limit)</option>
-        </select>
+    <h2>Best Practices for Writing Instagram Bios</h2>
+    <p>
+      A bio is your first impression. Here are some tips for making the most of your <strong>150 characters</strong>:
+    </p>
+    <ul>
+      <li>Keep it short and <strong>brand-focused</strong>.</li>
+      <li>Use <strong>emojis</strong> to add personality without wasting words.</li>
+      <li>Add a <strong>call-to-action (CTA)</strong> like “Follow for daily tips.”</li>
+      <li>Include your <strong>niche keywords</strong> so people can discover you.</li>
+      <li>Use the <strong>link in bio</strong> effectively to drive traffic to your website.</li>
+    </ul>
 
-        <textarea id="inputText" placeholder="Type or paste your bio/caption here..."></textarea>
-        <div class="counter">
-          <span id="charCount">0</span>/<span id="charLimit">150</span> characters
-        </div>
+    <h2>Best Practices for Writing Instagram Captions</h2>
+    <p>
+      Captions give context to your photos and reels. Good captions can improve engagement, SEO, and visibility. 
+      Keep these tips in mind:
+    </p>
+    <ul>
+      <li>Use the first 125 characters as a <strong>hook</strong> to grab attention.</li>
+      <li>Include relevant <strong>hashtags</strong> (but don’t overstuff).</li>
+      <li>Tell a <strong>story</strong> that connects with your audience.</li>
+      <li>Use <strong>line breaks</strong> and emojis to improve readability.</li>
+      <li>Ask a <strong>question</strong> to encourage comments.</li>
+    </ul>
 
-        <!-- Social Share Bar -->
-        <div class="share-bar">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://freeinstatools.com" class="fb" target="_blank">Facebook</a>
-          <a href="https://twitter.com/intent/tweet?text=Check+your+Instagram+bio+%26+caption+length+with+this+free+tool!&url=https://freeinstatools.com" class="tw" target="_blank">Twitter</a>
-          <a href="https://api.whatsapp.com/send?text=Check+your+Instagram+bio+%26+caption+length+with+this+free+tool!+https://freeinstatools.com" class="wa" target="_blank">WhatsApp</a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://freeinstatools.com&title=Instagram+Bio+%26+Caption+Length+Checker&summary=Free+tool+to+count+Instagram+bio+%26+caption+characters+online." class="li" target="_blank">LinkedIn</a>
-        </div>
+    <h2>How to Use This Instagram Character Counter Tool</h2>
+    <ol>
+      <li>Select either “Instagram Bio” or “Instagram Caption” mode.</li>
+      <li>Type or paste your text into the box.</li>
+      <li>Watch the <strong>live character count</strong> update instantly.</li>
+      <li>Copy your optimized text with one click and paste it into Instagram.</li>
+    </ol>
 
-        <button id="copyBtn">Copy Text</button>
-      </section>
+    <h2>SEO Benefits of Optimized Instagram Captions</h2>
+    <p>
+      Instagram captions aren’t just about words – they’re about discoverability. 
+      Using <strong>SEO-friendly captions</strong> with the right keywords and hashtags can help your posts appear in search results, 
+      boosting visibility and follower growth. 
+      Our <strong>Instagram caption character counter</strong> ensures that your captions are both engaging and optimized for Instagram’s algorithm.
+    </p>
 
-      <!-- Expanded SEO Content -->
-      <article class="content">
-        <h2>Understanding Instagram Bio & Caption Limits</h2>
-        <p>
-          Instagram restricts bios to <strong>150 characters</strong> and captions to <strong>2,200 characters</strong>. 
-          If you go beyond the limit, your text may get cut off or fail to publish correctly. This free counter helps you 
-          <strong>stay compliant, avoid errors, and create engaging content</strong>.
-        </p>
+    <h2>Who Should Use This Tool?</h2>
+    <p>This free Instagram character counter is perfect for:</p>
+    <ul>
+      <li><strong>Influencers</strong> – Maintain consistent branding and optimized captions.</li>
+      <li><strong>Businesses</strong> – Share promotions and CTAs without exceeding limits.</li>
+      <li><strong>Marketers</strong> – Improve campaign engagement with optimized bios and captions.</li>
+      <li><strong>Everyday Instagram users</strong> – Make posts more engaging and fun.</li>
+    </ul>
 
-        <h2>Best Practices for Writing Instagram Bios</h2>
-        <ul>
-          <li>Keep it short and <strong>brand-focused</strong>.</li>
-          <li>Include a <strong>call-to-action (CTA)</strong> like “Follow for tips.”</li>
-          <li>Use <strong>emojis</strong> to add personality without wasting characters.</li>
-          <li>Add a <strong>link-in-bio</strong> to drive traffic.</li>
-        </ul>
+    <h2>Frequently Asked Questions (FAQs)</h2>
+    <p><strong>Q: What is the Instagram bio character limit?</strong><br>A: Instagram bios allow up to <strong>150 characters</strong>.</p>
+    <p><strong>Q: What is the Instagram caption character limit?</strong><br>A: Instagram captions allow up to <strong>2,200 characters</strong>.</p>
+    <p><strong>Q: Why should I use this character counter?</strong><br>A: It helps you <strong>stay within Instagram’s limits</strong>, improve engagement, and save time.</p>
+    <p><strong>Q: Is this tool free?</strong><br>A: Yes, it is a <strong>100% free Instagram tool</strong> with no login required.</p>
+    <p><strong>Q: Can I use this for other social media platforms?</strong><br>A: While designed for Instagram, you can also use it for platforms like Facebook, Twitter, and LinkedIn.</p>
 
-        <h2>Best Practices for Writing Instagram Captions</h2>
-        <ul>
-          <li>Use the first 125 characters wisely (that’s what shows before “See More”).</li>
-          <li>Include relevant <strong>hashtags</strong> but don’t overstuff.</li>
-          <li>Write engaging <strong>stories, tips, or hooks</strong> to connect with your audience.</li>
-          <li>Keep captions easy to read with <strong>line breaks</strong> and emojis.</li>
-        </ul>
+    <h2>Conclusion</h2>
+    <p>
+      Optimizing your Instagram bio and captions is essential for growing your account, improving engagement, 
+      and making your profile stand out. Our <strong>free Instagram bio and caption character counter</strong> 
+      is the easiest way to ensure your text is within limits, SEO-friendly, and effective. 
+      Start using it today to craft the perfect Instagram bio and captions that capture attention and drive growth.
+    </p>
+  </article>
+</main>
 
-        <h2>Step-by-Step Guide to Using This Tool</h2>
-        <ol>
-          <li>Select “Instagram Bio” or “Instagram Caption” mode.</li>
-          <li>Type or paste your text into the box.</li>
-          <li>See the <strong>live character count</strong> update instantly.</li>
-          <li>Copy your optimized text with one click.</li>
-        </ol>
-
-        <h2>FAQs – Instagram Character Counter</h2>
-        <p><strong>Q: What is the Instagram bio limit?</strong><br>A: Instagram bios allow up to <strong>150 characters</strong>.</p>
-        <p><strong>Q: What is the Instagram caption limit?</strong><br>A: Instagram captions allow up to <strong>2,200 characters</strong>.</p>
-        <p><strong>Q: Why should I use this character counter?</strong><br>A: It helps you <strong>optimize Instagram bios and captions</strong> in real-time so you stay within limits and improve engagement.</p>
-        <p><strong>Q: Is this tool free?</strong><br>A: Yes, this is a <strong>100% free Instagram tool</strong> with no login required.</p>
-      </article>
-    </main>
 
   <!-- Footer -->
   <footer>

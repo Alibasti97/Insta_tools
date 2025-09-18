@@ -15,27 +15,34 @@
 <body>
 
   <!-- Navbar -->
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/FREE.svg" alt="FreeInstaTools Logo">
-      </a>
+<header>
+  <div class="logo">
+    <a href="index.html">
+        <img src="assets/FREE.svg" alt="Free Insta Tools Logo">
+    </a>
+  </div>
+  <!-- Hamburger -->
+  <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
+  <nav id="nav-menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="captions-bio.html">Bio & Caption Counter</a>
+     <!-- More Tools Dropdown -->
+    <div class="dropdown">
+      <a href="#">More Tools ▾</a>
+      <div class="dropdown-content">
+         <a href="captions-generator.html">Generate Captions</a>
+    <a href="hashtags.html">Generate Hashtags</a>
+    <a href="fonts.html">Fonts Generator</a>
+    <a href="engagement-calculator.html">Engagement Calculator</a>
+      </div>
     </div>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav id="nav-menu">
-      <a href="index.html">Home</a>
-      <a href="captions-bio.html">Bio & Caption Counter</a>
-      <a href="hashtags.html">Generate Hashtags</a>
-      <a href="fonts.html">Fonts Generator</a>
-      <a href="engagement-calculator.html" class="active">Engagement Calculator</a>
-      <a href="blogs/blogs.html">Blogs</a>
-    </nav>
-  </header>
-
+    <a href="blogs/blogs.html">Blogs</a>
+  </nav>
+</header>
   <!-- Engagement Calculator -->
   <section class="tool-container">
     <h1>Free Instagram Engagement Rate Calculator (2025)</h1>
@@ -57,76 +64,163 @@
         Engagement Rate: <span id="engagementRate"></span>%
       </div>
     </div>
-
-    <!-- SEO Content -->
-    <div class="seo-content">
-      <h2>What is Instagram Engagement Rate?</h2>
-      <p><strong>Instagram engagement rate</strong> is a metric that shows how actively your audience interacts with your content. It is calculated using likes, comments, and followers. The higher your engagement, the more valuable your profile is for brands and collaborations.</p>
-
-      <h2>Free Instagram Engagement Rate Calculator Online</h2>
-      <p>
-        This <strong>Instagram Engagement Rate Calculator</strong> is designed to help influencers, content creators, and brands measure how engaged their audience really is. 
-        Engagement is one of the most important Instagram metrics in 2025 because it shows how many of your followers actually interact with your posts instead of just scrolling by.
-      </p>
-
-      <h2>Why Engagement Matters on Instagram?</h2>
-      <p>
-        Instagram engagement is not only about likes and comments. A higher engagement rate signals to the algorithm that your content is valuable, 
-        which means better reach, more visibility, and even higher chances of getting featured on Explore. 
-        If you’re an influencer, brands often check your <strong>engagement rate</strong> before deciding on collaborations.
-      </p>
-
-      <h2>How to Improve Your Instagram Engagement Rate</h2>
-      <ul>
-        <li>✅ Use our <a href="hashtags.html">Instagram Hashtag Counter</a> to find the right hashtags</li>
-        <li>✅ Optimize your bio with our <a href="captions-bio.html">Instagram Bio & Caption Counter</a></li>
-        <li>✅ Make your posts stand out with our <a href="fonts.html">Instagram Stylish Fonts Generator</a></li>
-        <li>✅ Post consistently and at peak engagement hours</li>
-        <li>✅ Reply to comments and interact with your followers regularly</li>
-      </ul>
-
-      <h2>FAQs About Instagram Engagement Rate Calculator</h2>
-      <h3>1. What is a good Instagram engagement rate?</h3>
-      <p>A good Instagram engagement rate is typically between <strong>2% and 5%</strong>. Micro-influencers (below 50k followers) often have higher engagement compared to celebrities.</p>
-
-      <h3>2. How is Instagram engagement calculated?</h3>
-      <p>The formula is simple: <strong>(Likes + Comments) ÷ Followers × 100</strong>. Our <strong>Instagram engagement tool</strong> does the math instantly for you.</p>
-
-      <h3>3. Is this Instagram Engagement Calculator free?</h3>
-      <p>Yes, this tool is 100% free. You can use it unlimited times without signing up.</p>
-
-      <h3>4. Can brands use this tool to check influencer engagement?</h3>
-      <p>Absolutely. Many marketers use this <strong>Instagram analytics tool</strong> to verify the authenticity of influencers before running campaigns.</p>
-
-      <h2>Other Free Instagram Tools</h2>
-      <p>
-        Explore more tools on <a href="index.html">FreeInstaTools</a>:  
-        <a href="captions-bio.html">Instagram Bio & Caption Counter</a>,  
-        <a href="hashtags.html">Hashtag Counter</a>,  
-        <a href="fonts.html">Stylish Fonts Generator</a>,  
-        and our <a href="blogs/blogs.html">Instagram Marketing Blogs</a>.  
-        All tools are SEO-friendly, mobile responsive, and completely free to use.
-      </p>
-
-      <h2>Why Use Our Free Engagement Calculator?</h2>
-      <ul>
-        <li>✔ 100% free Instagram engagement tool</li>
-        <li>✔ Instant calculation with accurate results</li>
-        <li>✔ Perfect for influencers, brands, and marketers</li>
-        <li>✔ SEO-friendly and mobile responsive</li>
-      </ul>
-
-      <h2>Good Engagement Rate on Instagram</h2>
-      <p>Generally, a <strong>good Instagram engagement rate</strong> is between <strong>2% and 5%</strong>. However, this varies by niche. Micro-influencers often have higher engagement compared to large accounts.</p>
-    </div>
   </section>
+
+<!-- SEO Content -->
+
+  <!-- Intro Section -->
+   <main class="container" style="max-width: 1000px; margin: auto; padding: 20px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.7; color:#333;">
+  <section class="engagement-intro">
+    <h2>Instagram Engagement Rate Calculator – Free Online Tool</h2>
+    <p>
+      If you are an <strong>influencer, content creator, or brand</strong>, one of the most important metrics to track is your 
+      <strong>Instagram engagement rate</strong>. This number shows how many people actually interact with your content compared 
+      to your total number of followers. A high engagement rate signals strong audience trust and higher chances of growth on Instagram.  
+      With our free <strong>Instagram Engagement Rate Calculator</strong>, you can instantly check how engaging your posts are and 
+      whether your profile stands out for brand collaborations.
+    </p>
+  </section>
+
+  <!-- What is Engagement Rate -->
+  <section class="what-is-engagement">
+    <h2>What is Instagram Engagement Rate?</h2>
+    <p>
+      <strong>Instagram engagement rate</strong> is the percentage of your followers who actively interact with your content. 
+      This includes <strong>likes, comments, shares, and saves</strong>. Unlike vanity metrics such as follower count, engagement 
+      shows how meaningful your connection with your audience really is.
+    </p>
+    <p>
+      For example, an influencer with 10,000 followers but only 100 likes per post has a weaker presence compared to someone with 
+      2,000 followers and 300 likes per post. That’s why brands, agencies, and marketers rely heavily on <strong>engagement rate</strong> 
+      before choosing influencers for campaigns.
+    </p>
+  </section>
+
+  <!-- How to Calculate -->
+  <section class="calculate-engagement">
+    <h2>How to Calculate Instagram Engagement Rate?</h2>
+    <p>The formula to calculate engagement rate is simple:</p>
+    <p><strong>(Likes + Comments) ÷ Followers × 100 = Engagement Rate %</strong></p>
+    <p>
+      Example: If your post gets 500 likes and 50 comments, and you have 10,000 followers, your engagement rate is:  
+      <strong>(500 + 50) ÷ 10,000 × 100 = 5.5%</strong>.  
+      Our <strong>Instagram Engagement Calculator</strong> does this math instantly for you, saving time and giving accurate results.
+    </p>
+  </section>
+
+  <!-- Why it Matters -->
+  <section class="why-engagement-matters">
+    <h2>Why Engagement Rate Matters on Instagram?</h2>
+    <p>
+      Engagement is the lifeline of Instagram growth. A high engagement rate means your followers love your content, interact with it, 
+      and are likely to take action (like sharing, commenting, or even buying a product you promote).  
+    </p>
+    <p>
+      Instagram’s algorithm also favors accounts with higher engagement, giving your posts better reach and visibility on Explore.  
+      If you are an influencer, <strong>brands often check your engagement rate</strong> before collaborating, because they want 
+      influencers who can genuinely influence people, not just have a large follower count.
+    </p>
+  </section>
+
+  <!-- Good Engagement Rates -->
+  <section class="good-engagement">
+    <h2>What is a Good Instagram Engagement Rate in 2025?</h2>
+    <p>The average engagement rate varies by niche and follower size. Generally:</p>
+    <ul>
+      <li><strong>Above 6%:</strong> Excellent engagement rate</li>
+      <li><strong>3% – 5%:</strong> Very good and above average</li>
+      <li><strong>2% – 3%:</strong> Acceptable, depending on niche</li>
+      <li><strong>Below 2%:</strong> Needs improvement</li>
+    </ul>
+    <p>
+      Micro-influencers with fewer than 50k followers usually enjoy the highest engagement rates, while celebrities with millions 
+      of followers tend to have lower engagement percentages.
+    </p>
+  </section>
+
+  <!-- Tips to Improve -->
+  <section class="improve-engagement">
+    <h2>How to Improve Your Instagram Engagement Rate</h2>
+    <p>If your engagement rate is low, don’t worry — here are proven strategies to boost it:</p>
+    <ul>
+      <li>✅ Use our <a href="hashtags.html">Instagram Hashtag Counter</a> to find trending and relevant hashtags</li>
+      <li>✅ Optimize your profile with our <a href="captions-bio.html">Instagram Bio & Caption Counter</a></li>
+      <li>✅ Add personality with our <a href="fonts.html">Stylish Instagram Fonts Generator</a></li>
+      <li>✅ Post consistently at peak engagement hours</li>
+      <li>✅ Create reels and carousel posts for higher reach</li>
+      <li>✅ Interact with followers by replying to comments and DMs</li>
+      <li>✅ Run polls, Q&As, and story stickers to drive interaction</li>
+    </ul>
+  </section>
+
+  <!-- Free Tool Features -->
+  <section class="free-tool">
+    <h2>Free Instagram Engagement Rate Calculator Online</h2>
+    <p>
+      Our free <strong>Instagram engagement tool</strong> makes it easy for anyone to measure engagement instantly.  
+      Simply input your numbers (likes, comments, and followers), and the tool will show your percentage right away.  
+      Unlike complex analytics software, our calculator is:
+    </p>
+    <ul>
+      <li>✔ 100% Free to use</li>
+      <li>✔ Instant and accurate</li>
+      <li>✔ No signup required</li>
+      <li>✔ Perfect for influencers, marketers, and brands</li>
+    </ul>
+  </section>
+
+  <!-- FAQs -->
+  <section class="faq-engagement">
+    <h2>FAQs About Instagram Engagement Rate</h2>
+    <h3>1. What is a good engagement rate for Instagram?</h3>
+    <p>A good <strong>Instagram engagement rate</strong> is between 2% and 5%. Anything higher is excellent.</p>
+
+    <h3>2. How is engagement rate calculated?</h3>
+    <p>The formula is <strong>(Likes + Comments) ÷ Followers × 100</strong>. Our tool calculates it instantly.</p>
+
+    <h3>3. Is this calculator free?</h3>
+    <p>Yes! Our <strong>Instagram Engagement Calculator</strong> is completely free, with no limits or signups required.</p>
+
+    <h3>4. Can brands use this tool to check influencers?</h3>
+    <p>Absolutely. Many marketers and agencies use our tool to verify influencer authenticity before running paid campaigns.</p>
+  </section>
+
+  <!-- Other Tools -->
+  <section class="other-tools">
+    <h2>Other Free Instagram Tools</h2>
+    <p>
+      Along with our engagement calculator, explore other free tools on 
+      <a href="index.html">FreeInstaTools</a>:  
+      <a href="captions-bio.html">Instagram Bio & Caption Counter</a>,  
+      <a href="hashtags.html">Hashtag Counter</a>,  
+      <a href="fonts.html">Stylish Fonts Generator</a>, and  
+      <a href="blogs/blogs.html">Instagram Marketing Blogs</a>.  
+      These tools are mobile-friendly, SEO-optimized, and completely free.
+    </p>
+  </section>
+  <!-- Conclusion -->
+  <section class="final-thoughts">
+    <h2>Final Thoughts</h2>
+    <p>
+      In 2025, <strong>Instagram engagement rate</strong> is one of the most powerful metrics that define your influence.  
+      Whether you’re an influencer looking for brand deals or a business wanting to grow your community, keeping track of your 
+      engagement is essential.  
+    </p>
+    <p>
+      Use our <strong>Instagram Engagement Rate Calculator</strong> daily to track your progress, test new strategies, 
+      and improve your content performance.  
+      Start now — it’s quick, easy, and 100% free!
+    </p>
+  </section>
+   </main>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 FreeInstaTools. All Rights Reserved.  
       <a href="privacy.html">Privacy Policy</a> | 
       <a href="terms.html">Terms & Conditions</a> | 
-      <a href="about.html">About Us</a>
+      <a href="about.html">About Us</a> | 
+      <a href="contact.html">Contact Us</a>
     </p>
   </footer>
 
@@ -145,13 +239,16 @@
       document.getElementById("engagementRate").textContent = engagement.toFixed(2);
       document.getElementById("resultBox").style.display = "block";
     }
-
-    // Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
   </script>
+  <!-- Hamburger Script -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
